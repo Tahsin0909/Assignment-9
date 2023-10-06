@@ -1,0 +1,299 @@
+[
+    {
+        "id": 1,
+        "serviceName": "Weddings",
+        "description": "We specialize in creating beautiful and unforgettable wedding experiences that celebrate love and commitment.",
+        "img1": "wedding_img1.jpg",
+        "img2": "wedding_img2.jpg",
+        "img3": "wedding_img3.jpg",
+        "img4": "wedding_img4.jpg",
+        "packages": [
+            {
+                "packageName": "Silver Wedding",
+                "price": "$5,000 - $10,000",
+                "description": "An elegant wedding package with essential services for a memorable celebration.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Photography",
+                    "Entertainment"
+                ]
+            },
+            {
+                "packageName": "Gold Wedding",
+                "price": "$10,000 - $20,000",
+                "description": "A luxurious wedding package with additional features and premium services.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Photography",
+                    "Entertainment",
+                    "Floral arrangements",
+                    "Wedding planner"
+                ]
+            },
+            {
+                "packageName": "Platinum Wedding",
+                "price": "$20,000+",
+                "description": "Our most lavish wedding package with exclusive perks and a fully customized experience.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Photography",
+                    "Entertainment",
+                    "Floral arrangements",
+                    "Wedding planner",
+                    "Luxury transportation",
+                    "Honeymoon planning"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "serviceName": "Birthday Parties",
+        "description": "Let us turn your birthday into a memorable celebration filled with joy, laughter, and surprises.",
+        "img1": "birthday_img1.jpg",
+        "img2": "birthday_img2.jpg",
+        "img3": "birthday_img3.jpg",
+        "img4": "birthday_img4.jpg",
+        "packages": [
+            {
+                "packageName": "Silver Celebration",
+                "price": "$500 - $1,000",
+                "description": "A basic birthday party package with essential features for a fun-filled event.",
+                "includedServices": [
+                    "Theme selection",
+                    "Decor",
+                    "Entertainment",
+                    "Cake and snacks"
+                ]
+            },
+            {
+                "packageName": "Gold Celebration",
+                "price": "$1,000 - $2,000",
+                "description": "Upgrade your celebration with additional decor, entertainment, and personalized touches.",
+                "includedServices": [
+                    "Theme selection",
+                    "Decor",
+                    "Entertainment",
+                    "Cake and snacks",
+                    "Customized invitations"
+                ]
+            },
+            {
+                "packageName": "Platinum Celebration",
+                "price": "$2,000+",
+                "description": "Our most extravagant birthday package with exclusive experiences and surprises.",
+                "includedServices": [
+                    "Theme selection",
+                    "Decor",
+                    "Entertainment",
+                    "Cake and snacks",
+                    "Customized invitations",
+                    "Magician or clown",
+                    "Photo booth"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "serviceName": "Anniversaries",
+        "description": "Celebrate your enduring love with a beautifully planned anniversary party surrounded by friends and family.",
+        "img1": "anniversary_img1.jpg",
+        "img2": "anniversary_img2.jpg",
+        "img3": "anniversary_img3.jpg",
+        "img4": "anniversary_img4.jpg",
+        "packages": [
+            {
+                "packageName": "Silver Anniversary Celebration",
+                "price": "$1,500 - $3,000",
+                "description": "Mark 25 years of love with a package that includes venue, decor, and catering.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Music and entertainment"
+                ]
+            },
+            {
+                "packageName": "Gold Anniversary Gala",
+                "price": "$3,000 - $5,000",
+                "description": "A lavish package to celebrate 50 years of love with style and grandeur.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Live band",
+                    "Photography"
+                ]
+            },
+            {
+                "packageName": "Platinum Love Jubilee",
+                "price": "$5,000+",
+                "description": "Our most extravagant anniversary package with exclusive features and surprises.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Live band",
+                    "Photography",
+                    "Fireworks display",
+                    "Customized love story video"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "serviceName": "Engagement Parties",
+        "description": "Kick off your journey to marriage with a joyous engagement party filled with love and excitement.",
+        "img1": "engagement_img1.jpg",
+        "img2": "engagement_img2.jpg",
+        "img3": "engagement_img3.jpg",
+        "img4": "engagement_img4.jpg",
+        "packages": [
+            {
+                "packageName": "Silver Engagement Soiree",
+                "price": "$1,000 - $2,500",
+                "description": "A package that includes venue, decor, catering, and entertainment for your engagement celebration.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Live DJ"
+                ]
+            },
+            {
+                "packageName": "Gold Engagement Extravaganza",
+                "price": "$2,500 - $5,000",
+                "description": "Upgrade your engagement party with premium decor, entertainment, and personalized touches.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Live DJ",
+                    "Customized photo booth",
+                    "Engagement cake"
+                ]
+            },
+            {
+                "packageName": "Platinum Love Celebration",
+                "price": "$5,000+",
+                "description": "Our most lavish engagement package with exclusive experiences and surprises.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Live DJ",
+                    "Customized photo booth",
+                    "Engagement cake",
+                    "Fireworks display",
+                    "Customized love story video"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "serviceName": "Retirement Parties",
+        "description": "Celebrate a successful career and the beginning of a new chapter with a retirement party that reflects your accomplishments.",
+        "img1": "retirement_img1.jpg",
+        "img2": "retirement_img2.jpg",
+        "img3": "retirement_img3.jpg",
+        "img4": "retirement_img4.jpg",
+        "packages": [
+            {
+                "packageName": "Silver Retirement Roast",
+                "price": "$750 - $1,500",
+                "description": "An entertaining package for a lighthearted retirement party filled with humor and fond memories.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Comedian performance"
+                ]
+            },
+            {
+                "packageName": "Gold Retirement Dinner",
+                "price": "$1,500 - $3,000",
+                "description": "A classy package that includes venue, decor, gourmet dinner, and live music.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Live music",
+                    "Retirement speeches"
+                ]
+            },
+            {
+                "packageName": "Platinum Retirement Gala",
+                "price": "$3,000+",
+                "description": "Our most extravagant retirement package with exclusive experiences and surprises.",
+                "includedServices": [
+                    "Venue selection",
+                    "Decoration",
+                    "Catering",
+                    "Live band",
+                    "Photography",
+                    "Fireworks display",
+                    "Customized retirement video"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "serviceName": "Baby Shower",
+        "description": "Celebrate the upcoming arrival of your baby with a heartwarming and joyful baby shower.",
+        "img1": "babyshower_img1.jpg",
+        "img2": "babyshower_img2.jpg",
+        "img3": "babyshower_img3.jpg",
+        "img4": "babyshower_img4.jpg",
+        "packages": [
+            {
+                "packageName": "Silver Baby Shower",
+                "price": "$500 - $1,000",
+                "description": "A basic baby shower package with essential features for a heartwarming celebration.",
+                "includedServices": [
+                    "Theme selection",
+                    "Decor",
+                    "Catering",
+                    "Games and activities",
+                    "Party favors"
+                ]
+            },
+            {
+                "packageName": "Gold Baby Shower",
+                "price": "$1,000 - $2,000",
+                "description": "Upgrade your baby shower with additional decor, activities, and personalized touches.",
+                "includedServices": [
+                    "Theme selection",
+                    "Decor",
+                    "Catering",
+                    "Games and activities",
+                    "Party favors",
+                    "Customized invitations"
+                ]
+            },
+            {
+                "packageName": "Platinum Baby Shower",
+                "price": "$2,000+",
+                "description": "Our most extravagant baby shower package with exclusive experiences and surprises.",
+                "includedServices": [
+                    "Theme selection",
+                    "Decor",
+                    "Catering",
+                    "Games and activities",
+                    "Party favors",
+                    "Customized invitations",
+                    "Professional photographer",
+                    "Baby shower cake"
+                ]
+            }]
+        }
+        ]
