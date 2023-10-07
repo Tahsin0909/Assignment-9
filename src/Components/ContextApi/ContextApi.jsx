@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../../FIreBase/SDK";
 
 const AuthContext = createContext()
@@ -33,15 +33,20 @@ const ContextApi = ({ children }) => {
         const Unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
-                console.log(user)
+                // console.log(user)
 
             } else {
-                console.log(user)
+                // console.log(user)
             }
         });
         return () => Unsubscribe()
     }, [])
 
+    const GoogleProvider = new GoogleAuthProvider();
+
+    const GoogleSignUp = () =>{
+        return signInWithPopup(auth, GoogleProvider)
+    }
     //Sign out
     const SignOut = () => {
          signOut(auth)
@@ -58,7 +63,8 @@ const ContextApi = ({ children }) => {
         PasswordSignUp,
         PasswordSignIn,
         user,
-        SignOut
+        SignOut,
+        GoogleSignUp,
     }
     return (
         <AuthContext.Provider value={Data}>

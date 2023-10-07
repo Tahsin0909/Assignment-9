@@ -94,7 +94,7 @@ const Navbar = () => {
                         {
                             user.email ? (
                                 <div className="dropdown dropdown-end text-black">
-                                    <label tabIndex={0} className=" m-1"><img className="w-10" src="https://cdn-icons-png.flaticon.com/128/3237/3237472.png" alt="" /></label>
+                                    <label tabIndex={0} className=" m-1"><img className="w-10 rounded-full" src={user?.photoURL? `${user.photoURL}` : "https://cdn-icons-png.flaticon.com/128/3237/3237472.png" } alt="" /></label>
                                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                         <li><p>ID: {user.uid.slice(0,10)}</p></li>
                                         <li><p>Email: {user.email}</p></li>
