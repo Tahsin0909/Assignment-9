@@ -86,7 +86,7 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end">
                         {/* User Dropdown */}
-                        <div className="dropdown dropdown-bottom hidden">
+                        <div className="dropdown dropdown-bottom text-black hidden">
                             <label tabIndex={0} className=" m-1"><img className="w-10" src="https://cdn-icons-png.flaticon.com/128/3237/3237472.png" alt="" /></label>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><p>User</p></li>
@@ -95,7 +95,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div className=" ">
-                            <Link className="btn btn-primary">Sign In</Link>
+                            <Link className="btn  bg-gradient-to-r from-blue-600  to-blue-300  hover:from-pink-500 hover:to-yellow-500">Sign In</Link>
                         </div>
                     </div>
                 </div>
