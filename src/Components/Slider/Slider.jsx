@@ -37,14 +37,14 @@ const Slider = () => {
                     </div>
                 </div>
             </div>
-            <div className="text-center w-52 border border-3 border-red-600">
-                <p className="absolute z-50 top-60 left-1 right-1 lg:text-5xl ">
-                    <span className="lg:text-6xl text-white">
+            <div className="text-center w-52">
+                <p className="absolute z-50 top-20 md:top-52 lg:top-60 left-1 right-1 md:text-2xl lg:text-5xl ">
+                    <span className="lg:text-6xl md:text-4xl text-white">
                         <span className="text-transparent font-bold bg-gradient-to-r from-blue-500 to-[#c7c0af] bg-clip-text">Unlock </span>
                         the Magic of Elysian
                     </span>
                     <br />
-                    <span className="text-transparent font-bold bg-gradient-to-r from-blue-900 to-[#ffffff] bg-clip-text">Where Dreams Turn into Unforgettable Events</span>
+                    <span className=" text-transparent font-bold bg-gradient-to-r from-blue-900 to-[#ffffff] bg-clip-text">Where Dreams Turn into Unforgettable Events</span>
                 </p>
             </div>
         </div>
