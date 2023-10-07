@@ -5,10 +5,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Navbar from './Components/Navbar/Navbar';
 
 const router = createBrowserRouter([
   {
-    path:'/'
+    path:'/',
+    element:<Navbar></Navbar>
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
