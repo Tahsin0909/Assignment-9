@@ -4,7 +4,7 @@ import Service from "./Service";
 
 const Services = () => {
     const { ServicesData } = useContext(AuthContext)
-    console.log(ServicesData)
+    // console.log(ServicesData)
     return (
         <div className="md:mt-12 mt-4 ">
             <h1 className="md:text-4xl text-2xl text-center font-semibold">Our Services</h1>

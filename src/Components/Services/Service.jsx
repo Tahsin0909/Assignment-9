@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 const Service = ({ ServiceData }) => {
-    console.log(ServiceData)
+    // console.log(ServiceData)
     const { serviceName, img, description,id } = ServiceData
     return (
         <div className="md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 mt-4 md:mt-0">

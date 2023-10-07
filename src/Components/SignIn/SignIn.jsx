@@ -1,18 +1,35 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../ContextApi/ContextApi";
 
 
 const SignIn = () => {
+    const { PasswordSignIn } = useContext(AuthContext)
+    // state For Form value
+    const [emailValue, setEmailValue] = useState('')
+    const [passwordValue, setPasswordVAlue] = useState('')
+
+
+    const handleSignUp = (e) => {
+        const email = e.target.email.value;
+        const password = e.target.password.value
+        PasswordSignIn(email, password)
+            .then(result => console.log(result.user))
+        setEmailValue('');
+        setPasswordVAlue('');
+    }
     return (
         <div className="mb-44 relative top-32 flex justify-center items-center flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
             <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                 Sign In
             </h4>
-            <form className="mt-8 mb-2 w-72 md:w-[400px] max-w-screen-lg ">
+            <form onSubmit={e => { e.preventDefault(), handleSignUp(e) }}
+                className="mt-8 mb-2 w-72 md:w-[400px] max-w-screen-lg ">
                 <div className="mb-4 flex flex-col gap-6">
                     <div className="relative h-11 w-full min-w-[200px]">
-                        <input required
+                        <input required name="email" value={emailValue} onChange={e => setEmailValue(e.target.value)}
                             className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-blue-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 
                         />
@@ -21,7 +38,7 @@ const SignIn = () => {
                         </label>
                     </div>
                     <div className="relative h-11 w-full min-w-[200px]">
-                        <input
+                        <input name="password" value={passwordValue} onChange={e => setPasswordVAlue(e.target.value)}
                             type="password"
                             className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-blue-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 
@@ -31,13 +48,8 @@ const SignIn = () => {
                         </label>
                     </div>
                 </div>
-                <button
-                    className="mt-6 block w-full select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                    type="button"
-                    data-ripple-light="true"
-                >
-                    Register
-                </button>
+                <input className="mt-6 block w-full select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="submit" value="Sign In" />
                 <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                     Don't Have A Account?
                     <Link to={'/signUp'} className="font-medium text-blue-500 transition-colors hover:text-blue-700">

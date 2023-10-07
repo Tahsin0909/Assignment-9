@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../ContextApi/ContextApi";
 
 const Navbar = () => {
+    const { user,SignOut } = useContext(AuthContext)
+
     //NavLink for Navbar
     const NavbarLink = () => {
+
         return (
             <div className="flex flex-col lg:flex-row">
                 <li className="text-[17px]">
@@ -59,7 +64,7 @@ const Navbar = () => {
         )
     }
     return (
-        <div className="absolute z-50 w-full "> 
+        <div className="absolute z-50 w-full">
             <div className="  lg:mx-10">
                 <div className="navbar lg:text-blue-600 text-black ">
                     <div className="navbar-start">
@@ -86,17 +91,25 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end">
                         {/* User Dropdown */}
-                        <div className="dropdown dropdown-bottom text-black hidden">
-                            <label tabIndex={0} className=" m-1"><img className="w-10" src="https://cdn-icons-png.flaticon.com/128/3237/3237472.png" alt="" /></label>
-                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><p>User</p></li>
-                                <li><p>User email</p></li>
-                                <li><button>Sign Out</button></li>
-                            </ul>
-                        </div>
-                        <div className=" ">
-                            <Link to={'/SignIn'} className="btn  bg-gradient-to-r from-blue-600  to-blue-300  hover:from-pink-500 hover:to-yellow-500">Sign In</Link>
-                        </div>
+                        {
+                            user.email ? (
+                                <div className="dropdown dropdown-end text-black">
+                                    <label tabIndex={0} className=" m-1"><img className="w-10" src="https://cdn-icons-png.flaticon.com/128/3237/3237472.png" alt="" /></label>
+                                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                        <li><p>ID: {user.uid.slice(0,10)}</p></li>
+                                        <li><p>Email: {user.email}</p></li>
+                                        <li><Link onClick={() => SignOut()}>Sign Out</Link></li>
+                                    </ul>
+                                </div>
+                            ) :
+                                (
+                                    <div className=" ">
+                                        <Link to={'/SignIn'} className="btn  bg-gradient-to-r from-blue-600  to-blue-300  hover:from-pink-500 hover:to-yellow-500">Sign In</Link>
+                                    </div>
+                                )
+
+
+                        }
                     </div>
                 </div>
             </div>
