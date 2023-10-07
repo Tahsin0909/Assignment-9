@@ -4,15 +4,15 @@ import { createContext, useEffect, useState } from "react";
 const AuthContext = createContext()
 const ContextApi = ({ children }) => {
 
-    const [sliderData, setSliderData] = useState([])
+    const [ServicesData, setServicesData] = useState([])
     useEffect(() => {
-        fetch('./Slider.json')
+        fetch('./Services.json')
             .then(res => res.json())
-            .then(Slider => setSliderData(Slider))
+            .then(data => setServicesData(data))
     }, [])
 
     const Data = {
-        sliderData
+        ServicesData
     }
     return (
         <AuthContext.Provider value={Data}>

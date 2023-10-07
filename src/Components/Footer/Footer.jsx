@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div>
+        <div className="mt-8">
             {/* For Large and Medium */}
             <footer className="hidden md:footer p-10 bg-black text-white ">
                 <aside>

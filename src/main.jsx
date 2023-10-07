@@ -6,8 +6,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import {ContextApi} from './Components/ContextApi/ContextApi';
-import Slider from './Components/Slider/Slider';
 import Home from './Components/Home/Home';
+import NewHome from './Components/Home/NewHome';
 
 const router = createBrowserRouter([
   {
@@ -16,9 +16,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Slider></Slider>
-
-      }
+        element:<NewHome></NewHome>
+      },
     ]
   }
 ])

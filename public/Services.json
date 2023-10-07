@@ -2,11 +2,12 @@
     {
         "id": 1,
         "serviceName": "Weddings",
-        "description": "We specialize in creating beautiful and unforgettable wedding experiences that celebrate love and commitment.",
-        "img1": "wedding_img1.jpg",
-        "img2": "wedding_img2.jpg",
-        "img3": "wedding_img3.jpg",
-        "img4": "wedding_img4.jpg",
+        "description": "We specialize in creating beautiful and unforgettable wedding experiences that celebrate love and commitment. Whether you envision an intimate ceremony or a grand celebration, our expert team will bring your dream wedding to life. From venue selection to catering, decoration, photography, entertainment, and more, we take care of every detail, ensuring your special day is filled with love and cherished memories. With a passion for crafting love stories, we create moments that will be etched in your hearts forever.",
+        "img": "https://i.ibb.co/fNYm6tS/image.png",
+        "img1": "https://i.ibb.co/ck7n3KV/image.png",
+        "img2": "https://i.ibb.co/4K9z7ff/image.png",
+        "img3": "https://i.ibb.co/27F480N/image.png",
+        "img4": "https://i.ibb.co/X5SDxW9/image.png",
         "packages": [
             {
                 "packageName": "Silver Wedding",
@@ -55,11 +56,12 @@
     {
         "id": 2,
         "serviceName": "Birthday Parties",
-        "description": "Let us turn your birthday into a memorable celebration filled with joy, laughter, and surprises.",
-        "img1": "birthday_img1.jpg",
-        "img2": "birthday_img2.jpg",
-        "img3": "birthday_img3.jpg",
-        "img4": "birthday_img4.jpg",
+        "description": "Let us turn your birthday into a memorable celebration filled with joy, laughter, and surprises. Whether it's a child's milestone birthday or an adult's special day, we offer a range of packages to suit your needs. From selecting the perfect theme to decorating the venue, providing entertainment, delicious cake, and snacks, we ensure that your birthday party is a fun-filled event for all. With our attention to detail and creativity, we make your birthday wishes come true.",
+        "img": "https://i.ibb.co/xGczY6P/image.png",
+        "img1": "https://i.ibb.co/S7tgpgM/image.png",
+        "img2": "https://i.ibb.co/G3cXGh2/image.png",
+        "img3": "https://i.ibb.co/7tgjZ0w/image.png",
+        "img4": "https://i.ibb.co/HqBwrWz/image.png",
         "packages": [
             {
                 "packageName": "Silver Celebration",
@@ -103,11 +105,12 @@
     {
         "id": 3,
         "serviceName": "Anniversaries",
-        "description": "Celebrate your enduring love with a beautifully planned anniversary party surrounded by friends and family.",
-        "img1": "anniversary_img1.jpg",
-        "img2": "anniversary_img2.jpg",
-        "img3": "anniversary_img3.jpg",
-        "img4": "anniversary_img4.jpg",
+        "description": "Celebrate your enduring love with a beautifully planned anniversary party surrounded by friends and family. Mark the milestones of your love story with our expert services. Whether it's a silver anniversary, golden jubilee, or a love-filled platinum celebration, we handle everything from venue selection to catering, music and entertainment, and even personalized features like a love story video or fireworks display. We understand that your love deserves to be celebrated in the grandest of ways.",
+        "img": "https://i.ibb.co/BPhjw05/image.png",
+        "img1": "https://i.ibb.co/cT8Mz0P/image.png",
+        "img2": "https://i.ibb.co/gypz5wt/image.png",
+        "img3": "https://i.ibb.co/j4cRzk7/image.png",
+        "img4": "https://i.ibb.co/6rLGTdb/image.png",
         "packages": [
             {
                 "packageName": "Silver Anniversary Celebration",
@@ -151,11 +154,12 @@
     {
         "id": 4,
         "serviceName": "Engagement Parties",
-        "description": "Kick off your journey to marriage with a joyous engagement party filled with love and excitement.",
-        "img1": "engagement_img1.jpg",
-        "img2": "engagement_img2.jpg",
-        "img3": "engagement_img3.jpg",
-        "img4": "engagement_img4.jpg",
+        "description": "Kick off your journey to marriage with a joyous engagement party filled with love and excitement. Our engagement party packages cover everything from venue selection to decor, catering, entertainment, and more. Whether you prefer a silver engagement soiree or a platinum love celebration, we ensure that your engagement is celebrated in style. Let us create an atmosphere where your love story begins its next chapter with laughter, joy, and heartfelt moments.",
+        "img": "https://i.ibb.co/pnTVCbM/image.png",
+        "img1": "https://i.ibb.co/W2J2Zr8/image.png",
+        "img2": "https://i.ibb.co/tpzrQtK/image.png",
+        "img3": "https://i.ibb.co/gPmyK41/image.png",
+        "img4": "https://i.ibb.co/frwKzZk/image.png",
         "packages": [
             {
                 "packageName": "Silver Engagement Soiree",
@@ -202,10 +206,11 @@
         "id": 5,
         "serviceName": "Retirement Parties",
         "description": "Celebrate a successful career and the beginning of a new chapter with a retirement party that reflects your accomplishments.",
-        "img1": "retirement_img1.jpg",
-        "img2": "retirement_img2.jpg",
-        "img3": "retirement_img3.jpg",
-        "img4": "retirement_img4.jpg",
+        "img": "https://i.ibb.co/6WDHXh9/image.png",
+        "img1": "https://i.ibb.co/Vg6C7zh/image.png",
+        "img2": "https://i.ibb.co/wpZbvgs/image.png",
+        "img3": "https://i.ibb.co/Y23tDXk/image.png",
+        "img4": "https://i.ibb.co/RNFMSmR/image.png",
         "packages": [
             {
                 "packageName": "Silver Retirement Roast",
@@ -249,11 +254,12 @@
     {
         "id": 6,
         "serviceName": "Baby Shower",
-        "description": "Celebrate the upcoming arrival of your baby with a heartwarming and joyful baby shower.",
-        "img1": "babyshower_img1.jpg",
-        "img2": "babyshower_img2.jpg",
-        "img3": "babyshower_img3.jpg",
-        "img4": "babyshower_img4.jpg",
+        "description": "Celebrate the upcoming arrival of your baby with a heartwarming and joyful baby shower. Our baby shower packages cater to every mom-to-be's preferences. Whether you choose our silver baby shower with essential features, our gold baby shower with additional decor and activities, or our lavish platinum baby shower with exclusive experiences, we ensure a heartwarming celebration filled with love, games, activities, and delicious catering. Let us make this moment of anticipation truly special for you and your loved ones.",
+        "img": "https://i.ibb.co/TKfNGrM/image.png",
+        "img1": "https://i.ibb.co/4Z5fHPq/image.png",
+        "img2": "https://i.ibb.co/QCGJdzM/image.png",
+        "img3": "https://i.ibb.co/2jWv1cj/image.png",
+        "img4": "https://i.ibb.co/D5qHk8B/image.png",
         "packages": [
             {
                 "packageName": "Silver Baby Shower",
@@ -294,6 +300,7 @@
                     "Professional photographer",
                     "Baby shower cake"
                 ]
-            }]
-        }
+            }
         ]
+    }
+]

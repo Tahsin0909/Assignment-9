@@ -1,10 +1,7 @@
-import { useContext } from "react";
-import { AuthContext } from "../ContextApi/ContextApi";
+
 
 
 const Slider = () => {
-    const { sliderData } = useContext(AuthContext)
-    console.log(sliderData)
     return (
         <div className="">
             <div className="carousel h-[200px] md:h-[500px] lg:h-[700px] lg:w-[100vw-10%]  ">
