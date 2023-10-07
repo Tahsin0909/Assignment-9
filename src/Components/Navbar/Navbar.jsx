@@ -9,7 +9,7 @@ const Navbar = () => {
                     <NavLink
                         to={`/`}
                         className={({ isActive, isPending }) =>
-                            isActive ? "underline text-blue-600 font-semibold" : isPending ? "pending" : ""
+                            isActive ? "underline text-amber-600  font-semibold" : isPending ? "pending" : ""
                         }
                     >
                         Home
@@ -61,7 +61,7 @@ const Navbar = () => {
     return (
         <div className="absolute z-50 w-full "> 
             <div className="  lg:mx-10">
-                <div className="navbar lg:text-white text-black ">
+                <div className="navbar lg:text-blue-600 text-black ">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -95,7 +95,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div className=" ">
-                            <Link className="btn  bg-gradient-to-r from-blue-600  to-blue-300  hover:from-pink-500 hover:to-yellow-500">Sign In</Link>
+                            <Link to={'/SignIn'} className="btn  bg-gradient-to-r from-blue-600  to-blue-300  hover:from-pink-500 hover:to-yellow-500">Sign In</Link>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ const Service = ({ ServiceData }) => {
                 <figure><img className="w-full h-[256px]" src={img} alt="Service Image" /></figure>
                 <div className="card-body">
                     <h2 className="card-title w-fit  text-blue-600 text-lg font-bold">{serviceName}</h2>
-                    <p>{description.slice(0, 110)}....</p>
+                    <p>{description.slice(0, 130)}....</p>
                     <div className="card-actions justify-start">
                         <Link to={`/services/${id}`} ><button className="w-fit px-4 py-2 rounded-lg btn-primary font-semibold">DETAILS</button></Link>
                     </div>

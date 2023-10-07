@@ -8,6 +8,8 @@ import {
 import {ContextApi} from './Components/ContextApi/ContextApi';
 import Home from './Components/Home/Home';
 import NewHome from './Components/Home/NewHome';
+import SignUp from './Components/SignUp/SignUp';
+import SignIn from './Components/SignIn/SignIn';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
         path:'/',
         element:<NewHome></NewHome>
       },
+      {
+        path:'/signIn',
+        element:<SignIn></SignIn>
+      },
+      {
+        path:'/signUp',
+        element:<SignUp></SignUp>
+      }
     ]
   }
 ])
