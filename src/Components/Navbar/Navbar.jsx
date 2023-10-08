@@ -98,7 +98,7 @@ const Navbar = () => {
                                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                         <li><p>ID: {user.uid.slice(0,10)}</p></li>
                                         <li><p>Email: {user.email}</p></li>
-                                        <li><Link onClick={() => SignOut()}>Sign Out</Link></li>
+                                        <li><Link onClick={() => {SignOut(), localStorage.removeItem('ShowToast')}}>Sign Out</Link></li>
                                     </ul>
                                 </div>
                             ) :

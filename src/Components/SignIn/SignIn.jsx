@@ -10,7 +10,7 @@ const SignIn = () => {
     const navigate = useNavigate();
 
 
-    const { PasswordSignIn, GoogleSignUp, loading } = useContext(AuthContext)
+    const { PasswordSignIn, GoogleSignUp } = useContext(AuthContext)
     // state For Form value
     const [emailValue, setEmailValue] = useState('')
     const [passwordValue, setPasswordVAlue] = useState('')
@@ -51,6 +51,7 @@ const SignIn = () => {
                                     progress: undefined,
                                     theme: "light",
                                 })
+                                localStorage.setItem('ShowToast', JSON.stringify('false'))
                                 setEmailValue('');
                                 setPasswordVAlue('');
                             }
@@ -78,10 +79,10 @@ const SignIn = () => {
     //Handle Google Sign In
     const handleGoogleSignIn = async () => {
         await GoogleSignUp()
-            .then(result =>  {
+            .then(result => {
                 if (result.user) {
-                     const demo = result.user.email
-                     toast.info(`Authenticating As ${demo}`, {
+                    const demo = result.user.email
+                    toast.info(`Authenticating As ${demo}`, {
                         position: "top-center",
                         autoClose: 4000,
                         hideProgressBar: false,
@@ -92,9 +93,9 @@ const SignIn = () => {
                         theme: "light",
                     })
 
-                    console.log(location)
-                    location?.search? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
-                    
+                    localStorage.setItem('ShowToast', JSON.stringify('false'))
+                    location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
+
                 }
             })
     }
@@ -146,7 +147,7 @@ const SignIn = () => {
                 <div className="border md:w-[400px] w-72 mt-2 rounded-xl">
                     <h1 className="text-center absolute left-1 right-1 bottom-16">Sign In With</h1>
                     <div className=" flex gap-8 md:gap-16 items-center justify-center py-4 ">
-                        <img onClick={() => {handleGoogleSignIn()}} className="w-10 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110  duration-300" src="https://cdn-icons-png.flaticon.com/128/281/281764.png" alt="Google Sign Up" />
+                        <img onClick={() => { handleGoogleSignIn() }} className="w-10 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110  duration-300" src="https://cdn-icons-png.flaticon.com/128/281/281764.png" alt="Google Sign Up" />
                         <img className="w-10 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110  duration-300" src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook Sign Up" />
                         <img className="w-10 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110  duration-300" src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="Instagram Sign up" />
                     </div>

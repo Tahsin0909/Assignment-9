@@ -2,8 +2,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import auth from "../../FIreBase/SDK";
-import PrivetRoutes from "../PrivetRoute/PrivetRoute";
+import auth from "../../FIreBase/SDK"
 
 const AuthContext = createContext()
 const ContextApi = ({ children }) => {
@@ -40,22 +39,22 @@ const ContextApi = ({ children }) => {
     }
     // Google Sign In
 
-        // Save user
-        useEffect(() => {
-            const Unsubscribe = onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    setUser(user),
+    // Save user
+    useEffect(() => {
+        const Unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user),
                     setLoading(false)
-                    
-                    // console.log(user)
 
-    
-                } else {
-                    // console.log(user)
-                }
-            });
-            return () => Unsubscribe()
-        }, [])
+                // console.log(user)
+
+
+            } else {
+                // console.log(user)
+            }
+        });
+        return () => Unsubscribe()
+    }, [])
     //Sign out
     const SignOut = () => {
         setLoading(true)
@@ -69,6 +68,8 @@ const ContextApi = ({ children }) => {
     }
     // emailAndPassword Authentication
 
+    // For toast
+
     const Data = {
         ServicesData,
         PasswordSignUp,
@@ -76,7 +77,7 @@ const ContextApi = ({ children }) => {
         user,
         SignOut,
         GoogleSignUp,
-        loading
+        loading,
     }
     return (
         <AuthContext.Provider value={Data}>

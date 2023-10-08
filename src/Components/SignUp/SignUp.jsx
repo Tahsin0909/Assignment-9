@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextApi/ContextApi";
 import { useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,6 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
     const { PasswordSignUp, GoogleSignUp } = useContext(AuthContext)
+
+    const location = useLocation()
+    const navigate = useNavigate()
     // state For Form value
     const [userNameValue, setUserNAmeValue] = useState('')
     const [emailValue, setEmailValue] = useState('')
@@ -86,6 +89,7 @@ const SignUp = () => {
                         progress: undefined,
                         theme: "light",
                     })
+                    location?.search? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                 }
             })
     }
