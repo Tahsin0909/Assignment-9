@@ -48,6 +48,7 @@ const SignUp = () => {
                                     progress: undefined,
                                     theme: "light",
                                 })
+                                location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                                 setUserNAmeValue('')
                                 setEmailValue('');
                                 setPasswordVAlue('');
@@ -89,7 +90,7 @@ const SignUp = () => {
                         progress: undefined,
                         theme: "light",
                     })
-                    location?.search? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
+                    location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                 }
             })
     }

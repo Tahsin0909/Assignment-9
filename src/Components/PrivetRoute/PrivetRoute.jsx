@@ -7,10 +7,13 @@ import { Navigate, useLocation } from "react-router-dom";
 
 const PrivetRoutes = ({ children }) => {
 
-    let { user } = useContext(AuthContext)
+    let { user, loading } = useContext(AuthContext)
     const location = useLocation()
     console.log(location.pathname)
     console.log(user)
+    if(loading){
+        return <span className="loading loading-spinner loading-lg"></span>
+    }
     if (user.email) {
         return children;
     }

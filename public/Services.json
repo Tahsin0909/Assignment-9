@@ -9,7 +9,8 @@
         "img3": "https://i.ibb.co/27F480N/image.png",
         "img4": "https://i.ibb.co/X5SDxW9/image.png",
         "packages": [
-            {
+            {   
+                "id": 1,
                 "packageName": "Silver Wedding",
                 "price": "$5,000 - $10,000",
                 "description": "An elegant wedding package with essential services for a memorable celebration.",
@@ -21,7 +22,8 @@
                     "Entertainment"
                 ]
             },
-            {
+            {   
+                "id": 2,
                 "packageName": "Gold Wedding",
                 "price": "$10,000 - $20,000",
                 "description": "A luxurious wedding package with additional features and premium services.",
@@ -35,7 +37,8 @@
                     "Wedding planner"
                 ]
             },
-            {
+            {   
+                "id": 3,
                 "packageName": "Platinum Wedding",
                 "price": "$20,000+",
                 "description": "Our most lavish wedding package with exclusive perks and a fully customized experience.",
@@ -63,7 +66,8 @@
         "img3": "https://i.ibb.co/7tgjZ0w/image.png",
         "img4": "https://i.ibb.co/HqBwrWz/image.png",
         "packages": [
-            {
+            {   
+                "id": 1,
                 "packageName": "Silver Celebration",
                 "price": "$500 - $1,000",
                 "description": "A basic birthday party package with essential features for a fun-filled event.",
@@ -74,7 +78,8 @@
                     "Cake and snacks"
                 ]
             },
-            {
+            {   
+                "id": 2,
                 "packageName": "Gold Celebration",
                 "price": "$1,000 - $2,000",
                 "description": "Upgrade your celebration with additional decor, entertainment, and personalized touches.",
@@ -86,7 +91,8 @@
                     "Customized invitations"
                 ]
             },
-            {
+            {   
+                "id": 3,
                 "packageName": "Platinum Celebration",
                 "price": "$2,000+",
                 "description": "Our most extravagant birthday package with exclusive experiences and surprises.",
@@ -112,7 +118,8 @@
         "img3": "https://i.ibb.co/j4cRzk7/image.png",
         "img4": "https://i.ibb.co/6rLGTdb/image.png",
         "packages": [
-            {
+            {   
+                "id": 1,
                 "packageName": "Silver Anniversary",
                 "price": "$1,500 - $3,000",
                 "description": "Mark 25 years of love with a package that includes venue, decor, and catering.",
@@ -123,7 +130,8 @@
                     "Music and entertainment"
                 ]
             },
-            {
+            {   
+                "id": 2,
                 "packageName": "Gold Anniversary Gala",
                 "price": "$3,000 - $5,000",
                 "description": "A lavish package to celebrate 50 years of love with style and grandeur.",
@@ -135,7 +143,8 @@
                     "Photography"
                 ]
             },
-            {
+            {   
+                "id": 3,
                 "packageName": "Platinum Love Jubilee",
                 "price": "$5,000+",
                 "description": "Our most extravagant anniversary package with exclusive features and surprises.",
@@ -161,7 +170,8 @@
         "img3": "https://i.ibb.co/gPmyK41/image.png",
         "img4": "https://i.ibb.co/frwKzZk/image.png",
         "packages": [
-            {
+            {   
+                "id": 1,
                 "packageName": "Silver Engagement",
                 "price": "$1,000 - $2,500",
                 "description": "A package that includes venue, decor, catering, and entertainment for your engagement celebration.",
@@ -172,7 +182,8 @@
                     "Live DJ"
                 ]
             },
-            {
+            {   
+                "id": 2,
                 "packageName": "Gold Engagement",
                 "price": "$2,500 - $5,000",
                 "description": "Upgrade your engagement party with premium decor, entertainment, and personalized touches.",
@@ -185,7 +196,8 @@
                     "Engagement cake"
                 ]
             },
-            {
+            {   
+                "id": 3,
                 "packageName": "Platinum Love",
                 "price": "$5,000+",
                 "description": "Our most lavish engagement package with exclusive experiences and surprises.",
@@ -212,7 +224,8 @@
         "img3": "https://i.ibb.co/Y23tDXk/image.png",
         "img4": "https://i.ibb.co/RNFMSmR/image.png",
         "packages": [
-            {
+            {   
+                "id": 1,
                 "packageName": "Silver Retirement Roast",
                 "price": "$750 - $1,500",
                 "description": "An entertaining package for a lighthearted retirement party filled with humor and fond memories.",
@@ -223,7 +236,8 @@
                     "Comedian performance"
                 ]
             },
-            {
+            {   
+                "id": 2,
                 "packageName": "Gold Retirement Dinner",
                 "price": "$1,500 - $3,000",
                 "description": "A classy package that includes venue, decor, gourmet dinner, and live music.",
@@ -235,7 +249,8 @@
                     "Retirement speeches"
                 ]
             },
-            {
+            {   
+                "id": 3,
                 "packageName": "Platinum Retirement Gala",
                 "price": "$3,000+",
                 "description": "Our most extravagant retirement package with exclusive experiences and surprises.",
@@ -261,7 +276,8 @@
         "img3": "https://i.ibb.co/2jWv1cj/image.png",
         "img4": "https://i.ibb.co/D5qHk8B/image.png",
         "packages": [
-            {
+            {   
+                "id": 1,
                 "packageName": "Silver Baby Shower",
                 "price": "$500 - $1,000",
                 "description": "A basic baby shower package with essential features for a heartwarming celebration.",
@@ -273,7 +289,8 @@
                     "Party favors"
                 ]
             },
-            {
+            {   
+                "id": 2,
                 "packageName": "Gold Baby Shower",
                 "price": "$1,000 - $2,000",
                 "description": "Upgrade your baby shower with additional decor, activities, and personalized touches.",
@@ -286,7 +303,8 @@
                     "Customized invitations"
                 ]
             },
-            {
+            {   
+                "id": 3,
                 "packageName": "Platinum Baby Shower",
                 "price": "$2,000+",
                 "description": "Our most extravagant baby shower package with exclusive experiences and surprises.",
