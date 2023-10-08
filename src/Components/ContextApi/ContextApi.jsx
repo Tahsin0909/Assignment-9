@@ -9,7 +9,7 @@ const ContextApi = ({ children }) => {
     // Services data
     const [ServicesData, setServicesData] = useState([])
     useEffect(() => {
-        fetch('../../../public/Services.json')
+        fetch('./Services.json')
             .then(res => res.json())
             .then(data => setServicesData(data))
     }, [])

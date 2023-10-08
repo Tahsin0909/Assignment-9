@@ -9,6 +9,8 @@ import { ToastContainer, toast } from "react-toastify";
 
 
 const NewHome = () => {
+
+    // For Showing Toast On Auth
     const { user } = useContext(AuthContext)
     const willShowToastRaw = localStorage.getItem('ShowToast')
     const willShowToast = JSON.parse(willShowToastRaw)
@@ -30,7 +32,8 @@ const NewHome = () => {
             localStorage.setItem('ShowToast', JSON.stringify('True'))
         }
     }, [willShowToast, user.email])
-
+    // For Showing Toast On Auth
+    
     return (
         <div>
             <Slider></Slider>
