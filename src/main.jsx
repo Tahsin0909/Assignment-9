@@ -10,6 +10,7 @@ import Home from './Components/Home/Home';
 import NewHome from './Components/Home/NewHome';
 import SignUp from './Components/SignUp/SignUp';
 import SignIn from './Components/SignIn/SignIn';
+import ServicesDetails from './Components/ServicesDetails/ServicesDetails';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path:'/signUp',
         element:<SignUp></SignUp>
+      },
+      {
+        path:'/services/:id',
+        element:<ServicesDetails></ServicesDetails>
       }
     ]
   }

@@ -113,7 +113,7 @@
         "img4": "https://i.ibb.co/6rLGTdb/image.png",
         "packages": [
             {
-                "packageName": "Silver Anniversary Celebration",
+                "packageName": "Silver Anniversary",
                 "price": "$1,500 - $3,000",
                 "description": "Mark 25 years of love with a package that includes venue, decor, and catering.",
                 "includedServices": [
@@ -162,7 +162,7 @@
         "img4": "https://i.ibb.co/frwKzZk/image.png",
         "packages": [
             {
-                "packageName": "Silver Engagement Soiree",
+                "packageName": "Silver Engagement",
                 "price": "$1,000 - $2,500",
                 "description": "A package that includes venue, decor, catering, and entertainment for your engagement celebration.",
                 "includedServices": [
@@ -173,7 +173,7 @@
                 ]
             },
             {
-                "packageName": "Gold Engagement Extravaganza",
+                "packageName": "Gold Engagement",
                 "price": "$2,500 - $5,000",
                 "description": "Upgrade your engagement party with premium decor, entertainment, and personalized touches.",
                 "includedServices": [
@@ -186,7 +186,7 @@
                 ]
             },
             {
-                "packageName": "Platinum Love Celebration",
+                "packageName": "Platinum Love",
                 "price": "$5,000+",
                 "description": "Our most lavish engagement package with exclusive experiences and surprises.",
                 "includedServices": [
