@@ -23,7 +23,7 @@ const Packages = ({ PackageData }) => {
 
                 <div className="flex-grow">
                     {
-                        includedServices.map(facilities => <ServiceByPackage facilitiesData={facilities} key={`$`}></ServiceByPackage>)
+                        includedServices.map(facilities => <ServiceByPackage facilitiesData={facilities} key={`id$`}></ServiceByPackage>)
                     }
                 </div>
                 <div className="mt-12 p-0">

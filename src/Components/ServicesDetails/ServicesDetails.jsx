@@ -31,7 +31,7 @@ const ServicesDetails = () => {
             </div>
             <div className="flex flex-row flex-grow gap-4 mt-14 justify-center">
                 {
-                    packages.map(packageData => <Packages key={`$`} PackageData={packageData} ></Packages>)
+                    packages.map(packageData => <Packages key={`id$`} PackageData={packageData} ></Packages>)
                 }
             </div>
         </div>

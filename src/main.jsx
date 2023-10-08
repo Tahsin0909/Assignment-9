@@ -5,33 +5,34 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import {ContextApi} from './Components/ContextApi/ContextApi';
+import { ContextApi } from './Components/ContextApi/ContextApi';
 import Home from './Components/Home/Home';
 import NewHome from './Components/Home/NewHome';
 import SignUp from './Components/SignUp/SignUp';
 import SignIn from './Components/SignIn/SignIn';
 import ServicesDetails from './Components/ServicesDetails/ServicesDetails';
+import PrivetRoutes from './Components/PrivetRoute/PrivetRoute';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home></Home> ,
-    children:[
+    element: <Home></Home>,
+    children: [
       {
-        path:'/',
-        element:<NewHome></NewHome>
+        path: '/',
+        element: <NewHome></NewHome>
       },
       {
-        path:'/signIn',
-        element:<SignIn></SignIn>
+        path: '/services/:id',
+        element: <PrivetRoutes><ServicesDetails></ServicesDetails></PrivetRoutes>
       },
       {
-        path:'/signUp',
-        element:<SignUp></SignUp>
+        path: '/signIn',
+        element: <SignIn></SignIn>
       },
       {
-        path:'/services/:id',
-        element:<ServicesDetails></ServicesDetails>
+        path: '/signUp',
+        element: <SignUp></SignUp>
       }
     ]
   }

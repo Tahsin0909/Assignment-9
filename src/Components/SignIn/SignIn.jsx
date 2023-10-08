@@ -1,19 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextApi/ContextApi";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const SignIn = () => {
-    const { PasswordSignIn, GoogleSignUp } = useContext(AuthContext)
+    const navigate = useNavigate();
+
+
+    const { PasswordSignIn, GoogleSignUp, loading } = useContext(AuthContext)
     // state For Form value
     const [emailValue, setEmailValue] = useState('')
     const [passwordValue, setPasswordVAlue] = useState('')
     //Error MAssage State for password
     const [passwordError, setPasswordError] = useState('')
 
+    const location = useLocation()
     //Handle Email password Sign In
     const handleSignIn = (e) => {
         const email = e.target.email.value;
@@ -72,12 +76,12 @@ const SignIn = () => {
         //Handle Email password Sign In
     }
     //Handle Google Sign In
-    const handleGoogleSignIn = () => {
-        GoogleSignUp()
-            .then(result => {
+    const handleGoogleSignIn = async () => {
+        await GoogleSignUp()
+            .then(result =>  {
                 if (result.user) {
-                    const demo = result.user.email
-                    toast.info(`Authenticating As ${demo}`, {
+                     const demo = result.user.email
+                     toast.info(`Authenticating As ${demo}`, {
                         position: "top-center",
                         autoClose: 4000,
                         hideProgressBar: false,
@@ -87,6 +91,10 @@ const SignIn = () => {
                         progress: undefined,
                         theme: "light",
                     })
+
+                    console.log(location)
+                    location?.search? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
+                    
                 }
             })
     }
@@ -138,7 +146,7 @@ const SignIn = () => {
                 <div className="border md:w-[400px] w-72 mt-2 rounded-xl">
                     <h1 className="text-center absolute left-1 right-1 bottom-16">Sign In With</h1>
                     <div className=" flex gap-8 md:gap-16 items-center justify-center py-4 ">
-                        <img onClick={() => handleGoogleSignIn()} className="w-10 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110  duration-300" src="https://cdn-icons-png.flaticon.com/128/281/281764.png" alt="Google Sign Up" />
+                        <img onClick={() => {handleGoogleSignIn()}} className="w-10 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110  duration-300" src="https://cdn-icons-png.flaticon.com/128/281/281764.png" alt="Google Sign Up" />
                         <img className="w-10 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110  duration-300" src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook Sign Up" />
                         <img className="w-10 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110  duration-300" src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="Instagram Sign up" />
                     </div>
