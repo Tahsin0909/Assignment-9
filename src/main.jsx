@@ -13,6 +13,7 @@ import SignIn from './Components/SignIn/SignIn';
 import ServicesDetails from './Components/ServicesDetails/ServicesDetails';
 import PrivetRoutes from './Components/PrivetRoute/PrivetRoute';
 import ErrorPage from './Components/ErrorPage/Errrorpage';
+import Album from './Components/Album/Album';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/signUp',
         element: <SignUp></SignUp>
+      },
+      {
+        path:'/album',
+        element:<Album></Album>
       }
     ]
   }
