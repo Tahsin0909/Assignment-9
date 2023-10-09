@@ -15,6 +15,7 @@ import PrivetRoutes from './Components/PrivetRoute/PrivetRoute';
 import Album from './Components/Album/Album';
 import AboutUs from './Components/AboutUs/AboutUs';
 import TeamPage from './Components/TeamPAge/TeamPage';
+import ContactUS from './Components/ContactUS/ContactUS';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path:'/team',
         element:<TeamPage></TeamPage>
+      },
+      {
+        path:'/contactUs',
+        element:<ContactUS></ContactUS>
       }
     ]
   }

@@ -44,7 +44,7 @@ const NewHome = () => {
     return (
         <div>
             <Slider></Slider>
-            <Services data-aos="fade-up" ></Services>
+            <Services  ></Services>
             <PopularEvent></PopularEvent>
             <Clients></Clients>
             <WhyChoseUS></WhyChoseUS>
