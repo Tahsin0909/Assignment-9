@@ -14,6 +14,7 @@ import ServicesDetails from './Components/ServicesDetails/ServicesDetails';
 import PrivetRoutes from './Components/PrivetRoute/PrivetRoute';
 import ErrorPage from './Components/ErrorPage/Errrorpage';
 import Album from './Components/Album/Album';
+import AboutUs from './Components/AboutUs/AboutUs';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:'/album',
         element:<Album></Album>
+      },
+      {
+        path:'/aboutUs',
+        element:<AboutUs></AboutUs>
       }
     ]
   }
