@@ -10,21 +10,21 @@ const ContextApi = ({ children }) => {
     // Services data
     const [ServicesData, setServicesData] = useState([])
     useEffect(
-        //  function jsonData() {
-        //     fetch('public/Services.json')
-        //         .then(res => res.json())
-        //         .then(data => setServicesData(data))
-        // }
-
         function jsonData() {
-            axios.get('public/Services.json')
-                .then(response => {
-                    setServicesData(response.data);
-                })
-                .catch(error => {
-                    console.error('Error fetching Services.json:', error);
-                });
+            fetch('public/Services.json')
+                .then(res => res.json())
+                .then(data => setServicesData(data))
         }
+
+        // function jsonData() {
+        //     axios.get('public/Services.json')
+        //         .then(response => {
+        //             setServicesData(response.data);
+        //         })
+        //         .catch(error => {
+        //             console.error('Error fetching Services.json:', error);
+        //         });
+        // }
 
         , [])
 

@@ -6,10 +6,12 @@ import Slider from "../Slider/Slider";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../ContextApi/ContextApi";
 import { ToastContainer, toast } from "react-toastify";
+import { useLoaderData } from "react-router-dom";
 
 
 const NewHome = () => {
-
+    const ServicesData = useLoaderData()
+    console.log(ServicesData)
     // For Showing Toast On Auth
     const { user } = useContext(AuthContext)
     const willShowToastRaw = localStorage.getItem('ShowToast')
@@ -37,7 +39,7 @@ const NewHome = () => {
     return (
         <div>
             <Slider></Slider>
-            <Services></Services>
+            <Services ServicesData={ServicesData}></Services>
             <ToastContainer
                 position="top-center"
                 autoClose={4000}
