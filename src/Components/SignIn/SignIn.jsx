@@ -40,17 +40,6 @@ const SignIn = () => {
                         .then(result => {
 
                             if (result.user) {
-                                const demo = result.user.email
-                                toast.info(`Authenticating As ${demo}`, {
-                                    position: "top-center",
-                                    autoClose: 4000,
-                                    hideProgressBar: false,
-                                    closeOnClick: true,
-                                    pauseOnHover: true,
-                                    draggable: true,
-                                    progress: undefined,
-                                    theme: "light",
-                                })
                                 location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                                 localStorage.setItem('ShowToast', JSON.stringify('false'))
                                 setEmailValue('');
@@ -82,18 +71,6 @@ const SignIn = () => {
         await GoogleSignUp()
             .then(result => {
                 if (result.user) {
-                    const demo = result.user.email
-                    toast.info(`Authenticating As ${demo}`, {
-                        position: "top-center",
-                        autoClose: 4000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                    })
-
                     localStorage.setItem('ShowToast', JSON.stringify('false'))
                     location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
 

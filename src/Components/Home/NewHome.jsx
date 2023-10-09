@@ -5,16 +5,12 @@ import Slider from "../Slider/Slider";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../ContextApi/ContextApi";
 import { ToastContainer, toast } from "react-toastify";
-import { useLoaderData } from "react-router-dom";
 import PopularEvent from "../Popular Event/popularEvent";
 import Clients from "../Valuable_Clients/Clients";
 import WhyChoseUS from "../WhyChooseUs/WhyChoseUS";
-import Aos from "aos";
 
 
 const NewHome = () => {
-    const ServicesData = useLoaderData()
-    console.log(ServicesData)
     // For Showing Toast On Auth
     const { user } = useContext(AuthContext)
     const willShowToastRaw = localStorage.getItem('ShowToast')
@@ -22,7 +18,7 @@ const NewHome = () => {
     // console.log(JSON.parse(willShowToast))
     useEffect(() => {
         if (willShowToast == "false") {
-            console.log('Toast dekhaw')
+            // console.log('Toast dekhaw')
             const demo = user.email
             toast.info(`Authenticating As ${demo}`, {
                 position: "top-center",
@@ -38,9 +34,6 @@ const NewHome = () => {
         }
     }, [willShowToast, user.email])
     // For Showing Toast On Auth
-    Aos.init({
-        duration:1200
-    })
     return (
         <div>
             <Slider></Slider>

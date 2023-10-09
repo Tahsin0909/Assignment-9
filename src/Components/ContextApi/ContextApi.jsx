@@ -15,17 +15,6 @@ const ContextApi = ({ children }) => {
                 .then(res => res.json())
                 .then(data => setServicesData(data))
         }
-
-        // function jsonData() {
-        //     axios.get('public/Services.json')
-        //         .then(response => {J
-        //             setServicesData(response.data);
-        //         })
-        //         .catch(error => {
-        //             console.error('Error fetching Services.json:', error);
-        //         });
-        // }
-
         , [])
 
     // Services data
@@ -33,18 +22,18 @@ const ContextApi = ({ children }) => {
     // emailAndPassword Authentication
     const [user, setUser] = useState({})
     const [loading, setLoading] = useState(true)
-    console.log(loading)
+    // console.log(loading)
     // sign up
     const PasswordSignUp = (email, password) => {
         setLoading(true)
-        console.log(loading)
+        // console.log(loading)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     //Sign in
     const PasswordSignIn = (email, password) => {
         setLoading(true)
-        console.log(loading)
+        // console.log(loading)
         return signInWithEmailAndPassword(auth, email, password)
     }
     // Google Sign In
@@ -64,7 +53,7 @@ const ContextApi = ({ children }) => {
                 if (user.email) {
                     setLoading(false)
                 }
-                console.log(loading)
+                // console.log(loading)
 
 
 
@@ -81,7 +70,7 @@ const ContextApi = ({ children }) => {
             .then(
                 setUser({}),
                 setLoading(false),
-                console.log(loading)
+                // console.log(loading)
 
             )
             .catch(error => console.log(error.message))
