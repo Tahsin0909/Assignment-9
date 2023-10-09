@@ -7,7 +7,7 @@ const Clients = () => {
         duration:1200
     })
     return (
-        <div data-aos="flip-up"  className="mt-10 flex flex-col justify-center items-center">
+        <div data-aos="fade-up"  className="mt-10 flex flex-col justify-center items-center overflow-hidden">
             <h1 className="text-center md:text-2xl font-semibold ">Our Valuable Clients</h1>
             <div className="w-[70%]">
                 <Marquee pauseOnHover direction="right" >

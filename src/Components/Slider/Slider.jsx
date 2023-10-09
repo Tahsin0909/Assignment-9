@@ -2,6 +2,7 @@
 
 
 const Slider = () => {
+
     return (
         <div className="">
             <div className="carousel h-[200px] md:h-[500px] lg:h-[700px] lg:w-[100vw-10%]  ">

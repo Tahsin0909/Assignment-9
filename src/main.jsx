@@ -14,6 +14,7 @@ import ServicesDetails from './Components/ServicesDetails/ServicesDetails';
 import PrivetRoutes from './Components/PrivetRoute/PrivetRoute';
 import Album from './Components/Album/Album';
 import AboutUs from './Components/AboutUs/AboutUs';
+import TeamPage from './Components/TeamPAge/TeamPage';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path:'/aboutUs',
         element:<AboutUs></AboutUs>
+      },
+      {
+        path:'/team',
+        element:<TeamPage></TeamPage>
       }
     ]
   }
