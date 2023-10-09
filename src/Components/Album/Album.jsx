@@ -1,8 +1,32 @@
 
 import AlbumData from '../../../public/Album.json'
+import { useContext, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../ContextApi/ContextApi";
+import 'react-toastify/dist/ReactToastify.css';
 const Album = () => {
     const photos = AlbumData
-    console.log(photos)
+    // console.log(photos)
+    const { user } = useContext(AuthContext)
+    const willShowToastRaw = localStorage.getItem('ShowToast')
+    const willShowToast = JSON.parse(willShowToastRaw)
+    // console.log(JSON.parse(willShowToast))
+    useEffect(() => {
+        if (willShowToast == "false") {
+            const demo = user.email
+            toast.info(`Authenticating As ${demo}`, {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            })
+            localStorage.setItem('ShowToast', JSON.stringify('True'))
+        }
+    }, [willShowToast, user.email])
     return (
         <div className='relative top-28 mb-40 md:mx-6  lg:mx-14'>
             <h1 className='text-center text-4xl mb-4 font-semibold text-blue-600'>Moments in Time: Our Photo Collection</h1>
@@ -13,6 +37,18 @@ const Album = () => {
                         md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300' key={data.id} src={data.url} alt='Our Album'></img>)
                 }
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={4000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div>
     );
 };

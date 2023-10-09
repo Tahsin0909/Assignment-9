@@ -16,6 +16,7 @@ import Album from './Components/Album/Album';
 import AboutUs from './Components/AboutUs/AboutUs';
 import TeamPage from './Components/TeamPAge/TeamPage';
 import ContactUS from './Components/ContactUS/ContactUS';
+import PrivetRouteTeam from './Components/PrivetRouteTeam/PrivetRouteTeam';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/album',
-        element:<Album></Album>
+        element:<PrivetRoutes><Album></Album></PrivetRoutes>
       },
       {
         path:'/aboutUs',
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/team',
-        element:<TeamPage></TeamPage>
+        element:<PrivetRouteTeam><TeamPage></TeamPage></PrivetRouteTeam>
       },
       {
         path:'/contactUs',

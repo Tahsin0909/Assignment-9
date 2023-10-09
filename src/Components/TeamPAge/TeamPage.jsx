@@ -1,6 +1,30 @@
-
+import { useContext, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../ContextApi/ContextApi";
+import 'react-toastify/dist/ReactToastify.css';
 
 const TeamPage = () => {
+
+    const { user } = useContext(AuthContext)
+    const willShowToastRaw = localStorage.getItem('ShowToast')
+    const willShowToast = JSON.parse(willShowToastRaw)
+    // console.log(JSON.parse(willShowToast))
+    useEffect(() => {
+        if (willShowToast == "false") {
+            const demo = user.email
+            toast.info(`Authenticating As ${demo}`, {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            })
+            localStorage.setItem('ShowToast', JSON.stringify('True'))
+        }
+    }, [willShowToast, user.email])
     return (
         <div className="relative top-32 mb-40 lg:mx-20 mx-4">
             <div className="flex flex-col md:flex-row mb-8 justify-center items-center">
@@ -42,6 +66,18 @@ const TeamPage = () => {
                     <img src="https://5.imimg.com/data5/HN/NB/GLADMIN-10295550/office-party-catering-service-500x500.jpg" alt="" className="w-[450px] pr-6 pb-6 rounded-lg" />
                 </div>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={4000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div>
     );
 };
