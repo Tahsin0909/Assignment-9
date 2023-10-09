@@ -2,11 +2,11 @@
 import { useContext, useEffect } from "react";
 import Services from "../Services/Services";
 import Slider from "../Slider/Slider";
-
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../ContextApi/ContextApi";
 import { ToastContainer, toast } from "react-toastify";
 import { useLoaderData } from "react-router-dom";
+import PopularEvent from "../Popular Event/popularEvent";
 
 
 const NewHome = () => {
@@ -39,7 +39,8 @@ const NewHome = () => {
     return (
         <div>
             <Slider></Slider>
-            <Services ServicesData={ServicesData}></Services>
+            <Services ></Services>
+            <PopularEvent></PopularEvent>
             <ToastContainer
                 position="top-center"
                 autoClose={4000}
