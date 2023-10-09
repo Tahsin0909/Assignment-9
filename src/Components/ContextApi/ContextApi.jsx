@@ -16,100 +16,94 @@ const ContextApi = ({ children }) => {
         //         .then(data => setServicesData(data))
         // }
 
-    function jsonData() {
-        axios.get('public/Services.json')
-            .then(response => {
-                setServicesData(response.data);
-            })
-            .catch(error => {
-                console.error('Error fetching Services.json:', error);
-            });
-    }
+        function jsonData() {
+            axios.get('public/Services.json')
+                .then(response => {
+                    setServicesData(response.data);
+                })
+                .catch(error => {
+                    console.error('Error fetching Services.json:', error);
+                });
+        }
 
         , [])
-// useEffect(() => {
-//     async () => {
-//         try {
-//             const response = await fetch('./Services.json');
-//             const data = await response.json();
-//             setServicesData(data);
-//         } catch (error) {
-//             console.error('Error fetching Services.json:', error);
-//         }
-//     }
-// }, [ServicesData]);
 
-// Services data
+    // Services data
 
-// emailAndPassword Authentication
-const [user, setUser] = useState({})
-const [loading, setLoading] = useState(true)
+    // emailAndPassword Authentication
+    const [user, setUser] = useState({})
+    const [loading, setLoading] = useState(true)
+    console.log(loading)
+    // sign up
+    const PasswordSignUp = (email, password) => {
+        setLoading(true)
+        console.log(loading)
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
 
-// sign up
-const PasswordSignUp = (email, password) => {
-    setLoading(true)
-    return createUserWithEmailAndPassword(auth, email, password)
-}
+    //Sign in
+    const PasswordSignIn = (email, password) => {
+        setLoading(true)
+        console.log(loading)
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+    // Google Sign In
+    const GoogleProvider = new GoogleAuthProvider();
 
-//Sign in
-const PasswordSignIn = (email, password) => {
-    setLoading(true)
-    return signInWithEmailAndPassword(auth, email, password)
-}
-// Google Sign In
-const GoogleProvider = new GoogleAuthProvider();
+    const GoogleSignUp = () => {
+        return signInWithPopup(auth, GoogleProvider)
+    }
+    // Google Sign In
 
-const GoogleSignUp = () => {
-    setLoading(true)
-    return signInWithPopup(auth, GoogleProvider)
-}
-// Google Sign In
-
-// Save user
-useEffect(() => {
-    const Unsubscribe = onAuthStateChanged(auth, (user) => {
-        if (user) {
-            setUser(user),
-                setLoading(false)
-
-            // console.log(user)
+    // Save user
+    useEffect(() => {
+        const Unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user),
+                    console.log(user)
+                if (user.email) {
+                    setLoading(false)
+                }
+                console.log(loading)
 
 
-        } else {
-            // console.log(user)
-        }
-    });
-    return () => Unsubscribe()
-}, [])
-//Sign out
-const SignOut = () => {
-    setLoading(true)
-    signOut(auth)
-        .then(
-            setUser({}),
-            setLoading(false)
 
-        )
-        .catch(error => console.log(error.message))
-}
-// emailAndPassword Authentication
+            } else {
+                // console.log(user)
+            }
+        });
+        return () => Unsubscribe()
+    }, [])
 
-// For toast
+    //Sign out
+    const SignOut = () => {
+        signOut(auth)
+            .then(
+                setUser({}),
+                setLoading(false),
+                console.log(loading)
 
-const Data = {
-    ServicesData,
-    PasswordSignUp,
-    PasswordSignIn,
-    user,
-    SignOut,
-    GoogleSignUp,
-    loading,
-}
-return (
-    <AuthContext.Provider value={Data}>
-        {children}
-    </AuthContext.Provider>
-)
+            )
+            .catch(error => console.log(error.message))
+    }
+    // emailAndPassword Authentication
+
+    // For toast
+
+    const Data = {
+        ServicesData,
+        PasswordSignUp,
+        PasswordSignIn,
+        user,
+        SignOut,
+        GoogleSignUp,
+        loading,
+    }
+    return (
+        <AuthContext.Provider value={Data}>
+            {children}
+        </AuthContext.Provider>
+    )
 };
 
 export { AuthContext, ContextApi };

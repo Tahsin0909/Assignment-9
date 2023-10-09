@@ -7,8 +7,11 @@ import 'react-toastify/dist/ReactToastify.css';
 const SignUp = () => {
     const { PasswordSignUp, GoogleSignUp } = useContext(AuthContext)
 
+
+    // Navigate After LOgIn
     const location = useLocation()
     const navigate = useNavigate()
+
     // state For Form value
     const [userNameValue, setUserNAmeValue] = useState('')
     const [emailValue, setEmailValue] = useState('')
@@ -37,22 +40,13 @@ const SignUp = () => {
                         .then(result => {
 
                             if (result.user) {
-                                const demo = result.user.email
-                                toast.info(`Authenticating As ${demo}`, {
-                                    position: "top-center",
-                                    autoClose: 4000,
-                                    hideProgressBar: false,
-                                    closeOnClick: true,
-                                    pauseOnHover: true,
-                                    draggable: true,
-                                    progress: undefined,
-                                    theme: "light",
-                                })
-                                location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
+
                                 setUserNAmeValue('')
                                 setEmailValue('');
                                 setPasswordVAlue('');
                                 setPasswordError('')
+                                // Navigate Previous PAge OR Home Page
+                                location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                             }
 
                         },
@@ -79,17 +73,7 @@ const SignUp = () => {
         GoogleSignUp()
             .then(result => {
                 if (result.user) {
-                    const demo = result.user.email
-                    toast.info(`Authenticating As ${demo}`, {
-                        position: "top-center",
-                        autoClose: 4000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                    })
+
                     location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                 }
             })

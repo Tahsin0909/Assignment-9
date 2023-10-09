@@ -11,14 +11,16 @@ const PrivetRoutes = ({ children }) => {
     const location = useLocation()
     console.log(location.pathname)
     console.log(user)
-    if(loading){
-        return <span className="loading loading-spinner loading-lg"></span>
+    if (loading) {
+        console.log(loading)
+        return <Navigate to={`/signIn?${location.pathname}`} replace={true} />
     }
     if (user.email) {
+        console.log(loading)
         return children;
     }
 
-    return <Navigate to={`/signIn?${location.pathname}`} replace={true} />
+    // return <Navigate to={`/signIn?${location.pathname}`} replace={true} />
 };
 
 export default PrivetRoutes;
