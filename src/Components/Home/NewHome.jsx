@@ -7,6 +7,7 @@ import { AuthContext } from "../ContextApi/ContextApi";
 import { ToastContainer, toast } from "react-toastify";
 import { useLoaderData } from "react-router-dom";
 import PopularEvent from "../Popular Event/popularEvent";
+import Clients from "../Valuable_Clients/Clients";
 
 
 const NewHome = () => {
@@ -41,6 +42,7 @@ const NewHome = () => {
             <Slider></Slider>
             <Services ></Services>
             <PopularEvent></PopularEvent>
+            <Clients></Clients>
             <ToastContainer
                 position="top-center"
                 autoClose={4000}
