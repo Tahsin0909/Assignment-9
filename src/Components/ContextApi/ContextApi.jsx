@@ -11,7 +11,7 @@ const ContextApi = ({ children }) => {
     const [ServicesData, setServicesData] = useState([])
     useEffect(
         function jsonData() {
-            fetch('public/Services.json')
+            fetch('./Services.json')
                 .then(res => res.json())
                 .then(data => setServicesData(data))
         }
@@ -73,7 +73,7 @@ const ContextApi = ({ children }) => {
             }
         });
         return () => Unsubscribe()
-    }, [])
+    }, [loading])
 
     //Sign out
     const SignOut = () => {

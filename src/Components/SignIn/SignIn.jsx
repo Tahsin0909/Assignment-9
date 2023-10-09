@@ -51,6 +51,7 @@ const SignIn = () => {
                                     progress: undefined,
                                     theme: "light",
                                 })
+                                location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                                 localStorage.setItem('ShowToast', JSON.stringify('false'))
                                 setEmailValue('');
                                 setPasswordVAlue('');
