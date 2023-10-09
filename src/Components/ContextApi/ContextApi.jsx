@@ -18,7 +18,7 @@ const ContextApi = ({ children }) => {
 
         // function jsonData() {
         //     axios.get('public/Services.json')
-        //         .then(response => {
+        //         .then(response => {J
         //             setServicesData(response.data);
         //         })
         //         .catch(error => {

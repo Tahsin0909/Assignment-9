@@ -46,6 +46,7 @@ const SignUp = () => {
                                 setPasswordVAlue('');
                                 setPasswordError('')
                                 // Navigate Previous PAge OR Home Page
+                                localStorage.setItem('ShowToast', JSON.stringify('false'))
                                 location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                             }
 
@@ -74,6 +75,7 @@ const SignUp = () => {
             .then(result => {
                 if (result.user) {
 
+                    localStorage.setItem('ShowToast', JSON.stringify('false'))
                     location?.search ? navigate(`${location?.search?.slice(1, location.search.length)}`) : navigate('/')
                 }
             })
