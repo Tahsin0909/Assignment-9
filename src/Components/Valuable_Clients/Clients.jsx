@@ -1,12 +1,16 @@
 import Marquee from "react-fast-marquee";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Clients = () => {
+    AOS.init({
+        duration:1200
+    })
     return (
-        <div className="mt-10 flex flex-col justify-center items-center">
+        <div data-aos="flip-up"  className="mt-10 flex flex-col justify-center items-center">
             <h1 className="text-center md:text-2xl font-semibold ">Our Valuable Clients</h1>
             <div className="w-[70%]">
-                <Marquee pauseOnHover direction="right" gradient>
+                <Marquee pauseOnHover direction="right" >
                     <img src="https://t4.ftcdn.net/jpg/03/26/60/21/240_F_326602189_vTWigDWFPYx8f6z5fBf3q6Ox5rgIKFR5.jpg" alt="" className="w-36 mx-2" />
                     <img src="https://t3.ftcdn.net/jpg/01/31/49/64/240_F_131496458_0ddjJJyClYI5KzIyZkfS9YEenlgInhGe.jpg" alt="" className="w-36 mx-2" />
                     <img src="https://t4.ftcdn.net/jpg/03/97/53/87/240_F_397538792_lDp7yF1tv2azaHULSQgDRlg2PbyZokvQ.jpg" alt="" className="w-36 mx-2" />

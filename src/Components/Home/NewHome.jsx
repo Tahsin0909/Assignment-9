@@ -8,6 +8,8 @@ import { ToastContainer, toast } from "react-toastify";
 import { useLoaderData } from "react-router-dom";
 import PopularEvent from "../Popular Event/popularEvent";
 import Clients from "../Valuable_Clients/Clients";
+import WhyChoseUS from "../WhyChooseUs/WhyChoseUS";
+import Aos from "aos";
 
 
 const NewHome = () => {
@@ -36,13 +38,16 @@ const NewHome = () => {
         }
     }, [willShowToast, user.email])
     // For Showing Toast On Auth
-    
+    Aos.init({
+        duration:1200
+    })
     return (
         <div>
             <Slider></Slider>
-            <Services ></Services>
+            <Services data-aos="fade-up" ></Services>
             <PopularEvent></PopularEvent>
             <Clients></Clients>
+            <WhyChoseUS></WhyChoseUS>
             <ToastContainer
                 position="top-center"
                 autoClose={4000}

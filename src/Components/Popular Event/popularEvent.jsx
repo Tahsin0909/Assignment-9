@@ -1,9 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PopularEvent = () => {
+    AOS.init({
+        duration:1200
+    })
     return (
-        <div className="mt-10">
+        <div className="mt-10 " data-aos="zoom-in">
             <h1 className="text-2xl text-center font-semibold mb-2">Our Popular Event</h1>
             <p className="text-center text-gray-400 mb-4">"An Unforgettable Celebration: Join Us <br />, Where Moments Become Memories and Friendships Blossom"</p>
             <div className=" lg:mx-80 mx-4 flex flex-col justify-center items-center ">
