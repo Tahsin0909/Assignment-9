@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../ContextApi/ContextApi";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Navbar = () => {
     const { user,SignOut } = useContext(AuthContext)
@@ -98,7 +101,7 @@ const Navbar = () => {
                                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                         <li><p>ID: {user.uid.slice(0,10)}</p></li>
                                         <li><p>Email: {user.email}</p></li>
-                                        <li><Link onClick={() => {SignOut(), localStorage.removeItem('ShowToast')}}>Sign Out</Link></li>
+                                        <li><Link onClick={() => {SignOut(),toast.info('Sign Out SuccessFull');localStorage.removeItem('ShowToast')}}>Sign Out</Link></li>
                                     </ul>
                                 </div>
                             ) :
@@ -113,6 +116,18 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={4000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div>
     );
 };
