@@ -12,11 +12,13 @@ import SignUp from './Components/SignUp/SignUp';
 import SignIn from './Components/SignIn/SignIn';
 import ServicesDetails from './Components/ServicesDetails/ServicesDetails';
 import PrivetRoutes from './Components/PrivetRoute/PrivetRoute';
+import ErrorPage from './Components/ErrorPage/Errrorpage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home></Home>,
+    errorElement:<ErrorPage errorMessage={'The page you are looking for not available!'}></ErrorPage>,
     children: [
       {
         path: '/',
