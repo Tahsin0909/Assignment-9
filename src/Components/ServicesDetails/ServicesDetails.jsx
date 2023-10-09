@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const ServicesDetails = () => {
     const { ServicesData, loading, user } = useContext(AuthContext)
-    console.log(ServicesData)
+    // console.log(ServicesData)
     const Id = useParams()
     // console.log(Id)
 
@@ -45,20 +45,20 @@ const ServicesDetails = () => {
     const { serviceName, description, img1, img2, img3, img4, packages } = DetailsData
     return (
         <div>
-            <div className="relative md:top-32 md:mb-[200px]">
-                <div className="flex lg:justify-center lg:items-center lg:gap-8 lg:mx-24">
-                    <div className="lg:w-[700px]">
-                        <h1 className="text-4xl font-semibold mb-4 text-blue-600">{serviceName}</h1>
-                        <p className="text-xl p-2">{description}</p>
+            <div className="relative top-28 md:top-32 mb-36 md:mb-[200px] mx-4 md:mx-10 lg:mx-0">
+                <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center lg:gap-8 lg:mx-24">
+                    <div className="md:w-full lg:w-[700px]">
+                        <h1 className="md:text-4xl text-2xl font-semibold mb-4 text-blue-600">{serviceName}</h1>
+                        <p className="md:text-xl p-2">{description}</p>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
-                        <img className="lg:w-72 lg:h-56 md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 rounded-lg" src={img1} alt="" />
-                        <img className="lg:w-72 lg:h-56 md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 rounded-lg" src={img2} alt="" />
-                        <img className="lg:w-72 lg:h-56 md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 rounded-lg" src={img3} alt="" />
-                        <img className="lg:w-72 lg:h-56 md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 rounded-lg" src={img4} alt="" />
+                    <div className="grid md:grid-cols-2 gap-4 mt-4 lg:mt-0">
+                        <img className="lg:w-72 lg:h-56 md:w-full md:h-48  md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 rounded-lg" src={img1} alt="" />
+                        <img className="lg:w-72 lg:h-56 md:w-full md:h-48  md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 rounded-lg" src={img2} alt="" />
+                        <img className="lg:w-72 lg:h-56 md:w-full md:h-48  md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 rounded-lg" src={img3} alt="" />
+                        <img className="lg:w-72 lg:h-56 md:w-full md:h-48  md:transition md:ease-in-out delay-100 md:hover:-translate-y-1 md:hover:scale-110  duration-300 rounded-lg" src={img4} alt="" />
                     </div>
                 </div>
-                <div className="flex flex-row flex-grow gap-4 mt-14 justify-center">
+                <div className="flex flex-col lg:flex-row flex-grow gap-4 mt-14 items-center justify-center">
                     {
                         packages.map(packageData => <Packages key={packageData.id} PackageData={packageData} ></Packages>)
                     }
